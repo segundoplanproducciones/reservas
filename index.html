@@ -258,8 +258,9 @@ video.vivo{width:100%;border-radius:18px;background:#2a0b1d;display:block;aspect
 <div id="toast"></div>
 <div id="print"></div>
 <input id="cam" type="file" accept="image/*" capture="environment" style="display:none">
-<script>window.BOOT = {};</script>
-<script src="config.js"></script>
+<script>window.BOOT = {};
+// config.js sin caché: si cambia el link de la app, se toma al instante
+document.write('<script src="config.js?v=' + Date.now() + '"><\/script>');</script>
 <script>
 (function () {
   'use strict';
